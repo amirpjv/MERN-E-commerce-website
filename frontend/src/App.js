@@ -30,7 +30,7 @@ const App = () => {
   return (
     <>
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-      <title>Amazona</title>
+      <title>Shop</title>
       <Header />
       <main >
         <Routes>

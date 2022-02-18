@@ -7,7 +7,7 @@ const Product = ({ product }) => {
         <Container fluid className="d-flex justify-content-evenly">
             <Card style={{ width: '17rem' }} className="my-3">
                 <Link to={`/product/${product._id}`}>
-                    <Card.Img as={Image} variant="top" src={product.image} alt={product.name} rounded width={286} height={286} />
+                    <Card.Img as={Image} variant="top" src={product.image} alt={product.name} rounded style={{maxWidth:'300',maxHeight:'300px'}} className=' overflow-hidden'/>
                 </Link>
                 <Card.Body>
                     <Link to={`/product/${product._id}`} className="text-decoration-none">

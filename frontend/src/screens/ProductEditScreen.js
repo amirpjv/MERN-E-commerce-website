@@ -78,6 +78,7 @@ const ProductEditScreen = () => {
     const userSignin = useSelector((state) => state.userSignin);
     const { userInfo } = userSignin;
     const uploadFileHandler = async (e) => {
+        setErrorUpload(false);
         const file = e.target.files[0];
         const bodyFormData = new FormData();
         bodyFormData.append('image', file);

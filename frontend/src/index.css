@@ -69,8 +69,8 @@ main {
   transform-origin: bottom left;
 }
 
-/* carousel */
-.carousel-item-next,
+/* ----------------carousel-------------- */
+/* .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
@@ -88,7 +88,8 @@ main {
   height: 300px;
   padding: 30px;
   margin: 40px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
+  width: 50vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -99,8 +100,9 @@ main {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
-}
+} */
 
+/* ----------- msgbox ------------- */
 #msgbox {
   /* width: 200px;
     height: 40px; */
@@ -138,28 +140,28 @@ main {
 }
 
 #brand-home {
-  opacity: 0; 
+  opacity: 0;
   height: 100px;
-  width: 100px; 
+  width: 100px;
   animation: opacityOn 5s normal infinite;
   animation-delay: 2s;
 }
 
 @keyframes opacityOn {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   25% {
-      opacity: 0;
+    opacity: 0;
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   75% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 

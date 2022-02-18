@@ -85,7 +85,7 @@ userRouter.get('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
 userRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id)
     if (user) {
-        if (user.email === 'admin@example.com') {
+        if (user.email === 'admin@admin.com') {
             res.status(400).send({ message: 'Can Not Delete Admin User' })
             return
         }
@@ -99,13 +99,12 @@ userRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) 
 userRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id)
     if (user) {
-        if (user.email === 'admin@example.com') {
+        if (user.email === 'admin@admin.com') {
             res.status(400).send({ message: 'Can Not Update Admin User' })
             return
         }
         user.name = req.body.name || user.name
         user.email = req.body.email || user.email
-        user.isSeller = req.body.isSeller || user.isSeller
         user.isAdmin = req.body.isAdmin || user.isAdmin
         const updatedUser= await user.save()
         res.json({ message: 'User Updated', user: updatedUser })

@@ -81,8 +81,8 @@ const ProductScreen = () => {
                         <Container fluid>
                             <Meta title={product.name} />
                             <Row>
-                                <Col md={6} className="d-flex justify-content-center justify-content-xl-start justify-content-lg-start">
-                                    <Image src={product.image} alt={product.name} fluid className="w-75 my-3" />
+                                <Col md={6} className="d-flex justify-content-center">
+                                    <Image src={product.image} alt={product.name} fluid style={{maxWidth:'600px',maxHeight:'600px'}} className="my-3 overflow-hidden" />
                                 </Col>
                                 <Col md={3}>
                                     <ListGroup variant='flush' className="my-3">

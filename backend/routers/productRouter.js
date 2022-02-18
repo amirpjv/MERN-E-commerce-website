@@ -6,7 +6,7 @@ import { isAdmin, isAuth } from '../utils.js'
 
 
 productRouter.get('/', expressAsyncHandler(async (req, res) => {
-    const pageSize = 6
+    const pageSize = 9
     const page = Number(req.query.pageNumber) || 1
     const name = req.query.name || ''
     const category = req.query.category || ''
@@ -34,7 +34,7 @@ productRouter.get('/categories', expressAsyncHandler(async (req, res) => {
     res.send(categories)
 }))
 productRouter.get('/top', expressAsyncHandler(async (req, res) => {
-    const products = await Product.find({}).sort({ rating: -1 }).limit(3) //limit for number products
+    const products = await Product.find({}).sort({ rating: -1 }).limit(6) //limit for number products
     res.json(products)
 }))
 
